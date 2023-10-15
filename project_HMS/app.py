@@ -14,7 +14,7 @@ app.secret_key = 'hi'
 db = mysql.connector.connect(
     host="localhost",
     user="root",
-    password="Rakesh@9999",
+    password="#######",
     database="hms"
 )
 
@@ -191,8 +191,8 @@ def send_email(to_address, subject, message):
         # Configure your SMTP settings
         SMTP_SERVER = 'smtp.gmail.com'
         SMTP_PORT = 587
-        SMTP_USERNAME = 'rakeshnakka2222@gmail.com'  # Replace with your Gmail address
-        SMTP_PASSWORD = "wphoscmspngtgrkm"           #'niuftiskmnapgdcw'
+        SMTP_USERNAME = 'SMTP_USERNAME'  # Replace with your Gmail address
+        SMTP_PASSWORD = "SMTP_PASSWORD"           #'niuftiskmnapgdcw'
         
         # Create a multipart message
         msg = MIMEMultipart()
