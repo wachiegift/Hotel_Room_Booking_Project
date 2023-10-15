@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R Hotel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ex_style_for_after_login.css') }}">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      <!--<input type="checkbox" id="show-search">-->
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#" style='color:black;'>R<span style='font-size:30px;color:black;'>&#9733;</span> Hotel</a></div>
+        <ul class="links">
+	
+          <li><a href="#">Home</a></li>
+		<li><a href="{{ url_for('Bookroompage1') }}">Book A Room</a></li>
+          <li><a href="#">Booking Food</a></li>
+        </ul>
+      </div>
+
+           
+         <div class="dropdown">
+  <span class="dropbtn" style='color:black;'><i class='fa fa-user-circle' style='font-size:36px'></i></span>
+  <div class="dropdown-content">
+    <a href="#">Profile</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</div>
+        
+
+	
+      <!--<label for="show-search" class="search-icon"><i class="fas fa-search"></i></label>
+      <form action="#" class="search-box">
+        <input type="text" placeholder="Type Something to Search..." required>
+        <button type="submit" class="go-icon"><i class="fas fa-long-arrow-alt-right"></i></button>
+      </form>-->
+    </nav>
+  </div>
+
+  <div class="dummy-text">
+    <h2 id="name">Welcome {{ username }}</h2>
+  </div>
+
+</body>
+</html>

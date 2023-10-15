@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R Hotel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ex_style_login_page.css') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+	<style>
+		#fs{
+			height:450px;
+			width: 450px;
+			padding: 60px 15px;
+		}
+	</style>
+</head>
+<body style="background-color:lightgrey;">
+  <div class="wrapper">
+    <nav>
+      <!--<input type="checkbox" id="show-search">-->
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#" style='color:black;'>R<span style='font-size:30px;color:black;'>&#9733;</span> Hotel</a></div>
+        <ul class="links">
+	
+          <li><a href="{{ url_for('homePage') }}">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="{{ url_for('room_services') }}">Room Services</a></li>
+              <li><a href="#">Food Services</a></li>
+              <li><a href="#">other services</a></li>
+            </ul>
+          </li>
+		<li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('Registration') }}">Registration</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+  </div>
+
+  <div class="dummy-text">
+	<img id="fs" src="https://i.ytimg.com/vi/GH174b19ry0/maxresdefault.jpg">
+    <p>Food and Beverage Department has duties in producing, serving
+and selling food and beverages to the guest in hotel. Food and Beverages
+is divided into two sections those are Food and Beverages Product and
+Food and Beverages Service. The main function from this department is
+food and beverages product as a major of producing foods and beverages
+in the hotel. The process of producing foods and beverages needs
+professional skill, feeling, correctness, velocity, and carefulness.
+</p>
+  </div>
+
+</body>
+</html>

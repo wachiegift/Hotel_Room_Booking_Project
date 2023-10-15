@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R Hotel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ex_style_for_after_login.css') }}">
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'> 
+<style>
+.dummy-text1  
+{  
+    margin: 0;  
+   padding-top:150px;
+	
+}  
+.book{  
+        width: 450px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 70px;  
+        background: lightblue;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 25px;  
+}  
+.l1{  
+    color: black;  
+    font-size: 17px;  
+}  
+#single{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#double{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+#suit{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+} 
+
+#reg{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    background-color: #f44336;
+  
+}  
+ 
+</style>
+
+
+
+
+</head>
+<body>
+  <div class="wrapper">
+    <nav>
+      
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#" style='color:black;'>R<span style='font-size:30px;color:black;'>&#9733;</span> Hotel</a></div>
+        <ul class="links">
+	
+
+          <!--recently commented
+          <li><a href="#">Home</a></li>
+	<li><a href="#">Book A Room</a></li>
+          <li><a href="#">Booking Food</a></li>
+        </ul>
+      </div>
+          -->
+           
+           <div class="dropdown" >
+  <span class="dropbtn" style='align-content: right;color:black;'><i class='fa fa-user-circle' style='font-size:36px'></i></span>
+  <div class="dropdown-content">
+    <a href="#">Profile</a>
+    <a href="{{ url_for('logout') }}">Logout</a>
+  </div>
+</div>
+    </nav>
+  </div>
+
+  <div class="dummy-text1">
+
+	<div class="book">
+    <form id="login" method="POST" action="{{ url_for('homePage2') }}">    
+        <label class="l1"><b>Single Rooms   
+        </b>    
+        </label>    
+        <input type="number" name="single" id="single" placeholder="No Of Single Rooms" min="0" max="5" required>    
+        <br><br>
+	
+	<label class="l1"><b>Double Rooms     
+        </b>    
+        </label>    
+        <input type="number" name="double" id="double" placeholder="No Of Double Rooms" min="0" max="5" required>    
+        <br><br>
+
+	<label class="l1"><b>Suit Rooms     
+        </b>    
+        </label>    
+        <input type="number" name="suit" id="suit" placeholder="No Of Suit Rooms" min="0" max="5" required>    
+        <br><br>
+
+        <input type="submit" name="reg" id="reg" value="Book Now">       
+        
+    </form> 
+	</div> 
+  </div>
+
+</body>
+</html>

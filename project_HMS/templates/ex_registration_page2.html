@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R Hotel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ex_style_reg_page.css') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<style>
+
+
+.dummy-text1  
+{  
+    margin: 0;  
+   padding-top:55px;
+	
+}  
+.login{  
+        width: 450px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 70px;  
+        background: lightblue;  
+        border-radius: 15px ;  
+          
+}  
+h2{  
+    text-align: center;  
+    color: #277582;  
+    padding: 25px;  
+}  
+.l1{  
+    color: black;  
+    font-size: 17px;  
+}  
+#Uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#password{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}  
+
+#mail{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}
+
+#no{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}
+
+#age{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}
+
+#confirm_password{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+} 
+
+
+#cliv{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+      
+}   
+
+#reg{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    background-color: #f44336;
+  
+}  
+
+
+
+<!--span{  
+    color: white;  
+    font-size: 17px;  
+}  -->
+.a1{  
+    float: right;  
+     
+}  
+ 
+</style>
+</head> 
+
+<script>  
+function validateform() {
+    var pwd=document.getElementById('password').value;
+    var cpwd=document.getElementById('confirm_password').value;
+	if (pwd != cpwd)
+	{
+		alert("passwords are not same");
+		
+		return false;
+	}
+  }
+</script>
+<body>
+  <div class="wrapper">
+    <nav>
+      <!--<input type="checkbox" id="show-search">-->
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#" style='color:black;'>R<span style='font-size:30px;color:black;'>&#9733;</span> Hotel</a></div>
+        <ul class="links">
+	
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          
+          <!-- recently commented
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="#">Room Services</a></li>
+              <li><a href="#">Food Services</a></li>
+              <li><a href="#">other services</a></li>
+            </ul>
+          </li>
+
+          
+	<li><a href="#">Login</a></li>
+          <li><a href="#">Registration</a></li>
+
+          -->
+        </ul>
+      </div>
+    </nav>
+  </div>
+
+  <div class="dummy-text1">
+    
+	<h2>Registration Page</h2><br>    
+    <div class="login">    
+    <form id="login" method="POST" onsubmit="return validateform()" action="{{ url_for('homePage1') }}">    
+        <label class="l1"><b>User Name     
+	</b>    
+        </label>    
+        <input type="text" name="Uname" id="Uname" placeholder="Username" required>    
+        <br>
+	
+	<label class="l1"><b>Email     
+        </b>    
+        </label>    
+        <input type="email" name="mail" id="mail" placeholder="Email"  required>    
+        <br> 
+	  
+	<label class="l1"><b>Phone Number     
+        </b>    
+        </label>    
+        <input type="tel" name="no" id="no" placeholder="Phone Number" pattern="[789][0-9]{9}" minlength = "10" maxlength = "10" required>    
+        <br> 
+
+	<label class="l1"><b>Age     
+        </b>    
+        </label>    
+        <input type="number" name="age" id="age" placeholder="Age" min="18" max="99" required>    
+        <br>
+
+        <label class="l1"><b>Password     
+        </b>    
+        </label>    
+        <input type="Password" name="Pass" id="password" placeholder="Password" onkeyup='check();' required>    
+        <br>
+
+	<label class="l1"><b>Confirm Password     
+        </b>    
+        </label>    
+        <input type="Password" name="CPass" id="confirm_password" placeholder="Confirm Password" onkeyup='check();' required> 
+        <br>
+    
+	<label class="l1"><b>Current Living 
+        </b>    
+        </label>    
+        <input type="text" name="cliv" id="cliv" placeholder="Current Living" required>    
+        <br><br>
+
+        <input type="submit" name="reg" id="reg" value="Register">       
+        
+    </form>     
+   
+  </div>
+
+</body>
+</html>

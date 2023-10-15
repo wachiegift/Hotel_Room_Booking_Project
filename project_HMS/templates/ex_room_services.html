@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>R Hotel</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/ex_style_login_page.css') }}">
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+	<style>
+		#rs{
+			height:450px;
+			width: 450px;
+			padding: 60px 15px;
+		}
+	</style>
+</head>
+<body style="background-color:lightgrey;">
+  <div class="wrapper">
+    <nav>
+      <!--<input type="checkbox" id="show-search">-->
+      <input type="checkbox" id="show-menu">
+      <label for="show-menu" class="menu-icon"><i class="fas fa-bars"></i></label>
+      <div class="content">
+      <div class="logo"><a href="#" style='color:black;'>R<span style='font-size:30px;color:black;'>&#9733;</span> Hotel</a></div>
+        <ul class="links">
+	
+          <li><a href="{{ url_for('homePage') }}">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li>
+            <a href="#" class="desktop-link">Services</a>
+            <input type="checkbox" id="show-services">
+            <label for="show-services">Services</label>
+            <ul>
+              <li><a href="#">Room Services</a></li>
+              <li><a href="{{ url_for('food_services') }}">Food Services</a></li>
+              <li><a href="#">other services</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ url_for('login') }}">Login</a></li>
+          <li><a href="{{ url_for('Registration') }}">Registration</a></li>
+        </ul>
+      </div>
+      
+    </nav>
+  </div>
+
+  <div class="dummy-text">
+	<img id="rs" src="https://www.itchotels.com/content/dam/itchotels/in/umbrella/welcomHotel/hotels/welcomhotelcoimbatore/images/overview-landing-page/overview/desktop/deluxe-suite-living-area.png">
+    <p>Room service or in-room dining is a hotel service enabling guests to choose items of food and drink for delivery to their hotel room for consumption. Room service is organized as a subdivision within
+ the food and beverage department of high-end hotel and resort properties. It is uncommon for room service to be offered in hotels that are not high-end, or in motels.
+ Room service may be provided on a 24-hour basis or limited to late night hours only. Due to the cost of customized orders and delivery of room service,
+ prices charged to the patron are typically much higher than in the hotel's restaurant or tuck shop, and a gratuity is expected.</p>
+  </div>
+
+</body>
+</html>
